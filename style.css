@@ -21,7 +21,8 @@
                 repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255, 255, 255, 0.02) 2px, rgba(255, 255, 255, 0.02) 4px);
             color: white;
             font-family: 'Share Tech Mono', monospace;
-            min-height: 100vh;
+            min-height: 100dvh;
+            min-width: 100dvw;
             display: flex;
             flex-direction: column;
             overflow-x: hidden;
@@ -37,10 +38,15 @@
             font-family: 'VT323', monospace;
             font-size: 1.2rem;
             border-bottom: 1px solid rgba(102, 255, 0, 0.2);
+            position: relative;
         }
 
         .header-warning {
             color: #888;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
         }
 
         /* MAIN CONTENT */
@@ -51,7 +57,7 @@
             align-items: center;
             padding: 20px;
             position: relative;
-        }
+      }
 
         /* TITLE SECTION */
         .title-container {
