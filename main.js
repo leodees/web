@@ -69,6 +69,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const modalQuote = document.getElementById('modalQuote');
     const modalClose = document.getElementById('modalClose');
     const modalOk = document.getElementById('modalOk');
+       const video = document.createElement('video');
+
 
     let sedangProses = false;
 
@@ -95,9 +97,37 @@ document.addEventListener('DOMContentLoaded', function () {
         requestAnimationFrame(tick);
     }
 
+    function hentikanVideo() {
+        if (video && typeof video.pause === 'function') {
+            video.pause();
+            video.currentTime = 0;
+        }
+    }
+
     function tampilkanHasil(nama, hasil) {
         modalNama.textContent = `NAMA: ${nama.toUpperCase()}`;
-        modalTier.textContent = hasil.tier;
+        hentikanVideo();
+        modalTier.innerHTML = '';
+        
+
+        if (!hasil.glitch) {
+            video.src = `Meme/${hasil.tier}.mp4`;
+            video.autoplay = true;
+            video.muted = false;
+            video.loop = true;
+            video.playsInline = false;
+            video.preload = 'auto';
+            video.volume = 1;
+            video.className = 'modal-video';
+            modalTier.appendChild(video);
+
+            video.play().catch(() => {
+                console.log('Audio/video tidak bisa autoplay, tetapi file sudah siap diputar.');
+            });
+        } else {
+            modalTier.textContent = 'SINYAL HILANG';
+        }
+
         modalQuote.textContent = pilihAcak(QUOTES);
 
         modal.classList.remove('positif', 'negatif', 'glitch-mode');
@@ -116,6 +146,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function tutupModal() {
         overlay.classList.remove('active');
+        hentikanVideo();
     }
 
     function jalankanCek() {
