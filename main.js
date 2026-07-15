@@ -6,20 +6,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const TIER_POSITIF = [
         { min: 5000, opsi: ["tinggi1","tinggi2"] },
-        { min: 0, opsi: ["medium1"] }
+        { min: 0, opsi: ["medium1","medium2"] }
     ];
 
     const TIER_NEGATIF = [
         { min: 0, opsi: ["negatif1", "negatif2"] }
     ];
 
-    const QUOTES = [
-        "*kamu telah diperingatkan.*",
-        "*jangan salahkan sistem kalau baper.*",
-        "*ini bukan hoax, ini sains ngasal bersertifikat.*",
-        "*hasil tidak bisa diganggu gugat, seperti takdir.*",
-        "*screenshot ini, tunjukin ke gebetan.*"
-    ];
+  const QUOTES = [
+    "*Alamak*",
+    "*Walawe*",
+    "*Hmmm*",
+  ];
 
     // Peluang kecil buat easter egg glitch, biar tetep absurd & gak ketebak
     const PELUANG_GLITCH = 0.06;
