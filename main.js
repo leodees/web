@@ -5,19 +5,12 @@ document.addEventListener('DOMContentLoaded', function () {
     // Dipilih acak biar tiap scan kerasa beda meski nama & levelnya sama.
 
     const TIER_POSITIF = [
-        { min: 9000, opsi: ["AURA SEPUH SEJATI // LEGENDARIS", "AURA MELEBIHI BATAS NALAR", "AURA DEWA TURUN GUNUNG"] },
-        { min: 7000, opsi: ["AURA WANGI KEMENYAN PREMIUM", "AURA SULTAN DADAKAN", "AURA GACOR PARAH"] },
-        { min: 5000, opsi: ["AURA KULI JAWA (SUPER KUAT)", "AURA RAJIN NABUNG RECEH", "AURA TAHAN BANTING"] },
-        { min: 3000, opsi: ["AURA LUMAYAN, GAK MENGECEWAKAN", "AURA B AJA TAPI SOLID", "AURA STANDAR SULTAN KECAMATAN"] },
-        { min: 0, opsi: ["AURA STANDAR, MASIH MANUSIAWI", "AURA IMUT TAPI ADA", "AURA KECIL TAPI GIGIH"] }
+        { min: 5000, opsi: ["tinggi1","tinggi2"] },
+        { min: 0, opsi: ["medium1"] }
     ];
 
     const TIER_NEGATIF = [
-        { min: 9000, opsi: ["AURA BEBAN KELUARGA TINGKAT DEWA", "AURA KUTUKAN 7 TURUNAN", "AURA NAAS MAKSIMAL"] },
-        { min: 7000, opsi: ["AURA GELAP (KEBANYAKAN BEGADANG)", "AURA HABIS DIPUTUSIN GEBETAN", "AURA APES KRONIS"] },
-        { min: 5000, opsi: ["AURA WIBU MANDI SETAHUN SEKALI", "AURA BAU BANTAL LAMA", "AURA GAK MANDI 3 HARI"] },
-        { min: 3000, opsi: ["AURA KURANG SEHAT, PERBANYAK MINUM AIR", "AURA BUTUH VITAMIN", "AURA AGAK KUSUT"] },
-        { min: 0, opsi: ["AURA MASIH BISA DISELAMATKAN, TENANG", "AURA CUMAN LAGI SIAL DIKIT", "AURA MASIH AMAN KOK"] }
+        { min: 0, opsi: ["negatif1", "negatif2"] }
     ];
 
     const QUOTES = [
